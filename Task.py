@@ -4,7 +4,7 @@ class Task:
         self.description=description
         self.priority=priority
         self.deadline=deadline
-        self.status="Pending" #Pending/In-Progress/Completed
+        self.status="Incomplete" #Incomplete/Completed
 
     def update_task(self, title=None, description=None, priority=None, deadline=None):
         if title:
@@ -20,8 +20,8 @@ class Task:
         self.status="Completed" 
         self.completionDate= completionDate 
 
-    def task_In_progress(self):
-        self.status="In-Progress"   
+    def task_Incomplete(self):
+        self.status="Incomplete"   
 
 class WorkTask(Task):
     def __init__(self,title,description,priority,deadline,project):
@@ -54,8 +54,16 @@ class User:
         self.taskList.remove(task)
         print("Task removed successfully") 
 
-    def get_Tasks(self):
-        return self.taskList  
+    def get_tasks(self, status=None):
+        if status:
+            tasks_with_status = []
+            for task in self.tasks:
+                if task.status == status:
+                    tasks_with_status.append(task)
+            return tasks_with_status
+        return self.tasks
+
+#Task Management Functions
 
 
 
