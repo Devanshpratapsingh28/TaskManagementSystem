@@ -21,5 +21,24 @@ class Task:
         self.completionDate= completionDate 
 
     def task_In_progress(self):
-        self.status="In-Progress"        
+        self.status="In-Progress"   
+
+class User:
+    def __init__(self,name):
+        self.name=name
+        self.taskList=[]
+
+    def addTask(self,task):
+        self.taskList.append(task) 
+        print("Task added successfully") 
+
+    def removeTask(self,task):
+        self.taskList.remove(task)
+        print("Task removed successfully") 
+
+    def get_Tasks(self):
+        return self.taskList  
+    
+      
+
 
