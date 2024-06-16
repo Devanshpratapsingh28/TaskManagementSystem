@@ -66,25 +66,13 @@ class TaskManager:
             return tasks_with_priority
         return self.taskList
 
-
-# class TaskManager(User):
-#     def __init__(self, name):
-#         super().__init__(name)
-#         print(f"Hi, {name} Your task manager is created successfully, now you can manage your tasks smoothly")
-
-#     def addTask(self, task):
-#         super().addTask(task)
-
-#     def removeTask(self, task):
-#         super().removeTask(task)
-
 #Examples for testing
 
 taskList = [
     Task("Task 1", "Go to market", "Low", "2024-06-30"),
     Task("Task 2", "Meeting on Friday", "High", "2024-06-21"),
     Task("Task 3", "Call Milkman", "Low", "2024-06-16"),
-    Task("Task 4", "Book Ticket", "High", "2024-06-30"),
+    Task("Task 4", "Book Ticket", "Urgent", "2024-06-30"),
     Task("Task 5", "Schedule meeting with Virat", "High", "2024-06-18")
 ]
 user = TaskManager("Alice")
