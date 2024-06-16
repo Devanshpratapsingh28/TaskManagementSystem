@@ -79,14 +79,14 @@ user = TaskManager("Alice")
 for task in taskList:
     user.addTask(task)
 
-# Give List all tasks Priority wise
+# Give List of all tasks Priority wise
 for task in user.getTasksPriority("High"):
     print(task.title, task.priority)
 
-# Mark task1 as completed
+# Marking task1 as completed
 taskList[0].taskCompleted("2024-06-20")
 
-# List completed tasks
+# List of completed tasks
 completed_tasks = user.getTasksStatus(status="Completed")
 for task in completed_tasks:
     print(task.title, task.status)        
